@@ -16,6 +16,10 @@ namespace JulyMVCORMConfig.Controllers
         July2018MVCContext _ORM = null;
         IHostingEnvironment _ENV = null;
 
+
+
+
+
         public FirstController(July2018MVCContext ORM, IHostingEnvironment ENV)
         {
             _ORM = ORM;
