@@ -12,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using JulyMVCORMConfig.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using JulyMVCORMConfig.Models;
 
 namespace JulyMVCORMConfig
 {
@@ -37,6 +38,13 @@ namespace JulyMVCORMConfig
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddDbContext<July2018MVCContext>(options =>
+    options.UseSqlServer(
+        Configuration.GetConnectionString("MyCS")));
+
+
+
             services.AddDefaultIdentity<IdentityUser>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 

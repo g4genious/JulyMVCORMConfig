@@ -1,0 +1,70 @@
+﻿@model Student
+
+<h1>Student Registration Form</h1>
+
+
+@if(ViewBag.Message !=null && ViewBag.Message != "")
+{
+    <h1 class="alert alert-success"><span class="glyphicon glyphicon-ok"></span> @ViewBag.Message</h1>
+}
+
+
+
+    <form action="RegisterStudent" method="Post" enctype="multipart/form-data">
+
+
+        <div>
+            <label for="Name" class="col-md-3">Name: </label>
+
+            <div class="col-md-9">
+                <input type="text" id="Name" name="Name" />
+                <span id="NameError"></span>
+            </div>
+
+        </div>
+
+
+
+        <div>
+            <label class="col-md-3">Email: </label>
+
+            <div class="col-md-9">
+                <input type="text" id="Email" name="Email" />
+                <span id="NameError"></span>
+            </div>
+
+        </div>
+
+
+        <div>
+            <label class="col-md-3">Profile Picture: </label>
+
+            <div class="col-md-9">
+                <input type="file" id="PP" name="PP" />
+                <span id="PPError"></span>
+            </div>
+
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div>
+            <label class="col-md-3">CV: </label>
+
+            <div class="col-md-9">
+                <input type="file" id="Resume" name="Resume" />
+                <span id="CVError"></span>
+            </div>
+
+        </div>
+
+        <br />
+        <br />
+
+
+
+        <input type="submit" />
+
+
+    </form>
+

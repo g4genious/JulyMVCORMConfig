@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Student>
+
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <td>
+                ID
+            </td>
+            <td>
+                Name
+            </td>
+            <td>
+                Email
+            </td>
+            <td>
+                Actions
+            </td>
+        </tr>
+    </thead>
+
+    <tbody>
+
+
+        @foreach (var S in Model)
+        {
+        <tr>
+            <td>
+                @S.Id
+            </td>
+            <td>
+                @S.Name
+            </td>
+            <td>
+                @S.Email
+            </td>
+            <td>
+                <a href="/First/DownloadCV?Path=@S.CV" class="btn btn-sm btn-success"><span class="glyphicon glyphicon-arrow-down"></span> Download CV</a>
+            </td>
+        </tr>
+            
+
+        }
+
+
+    </tbody></table>
