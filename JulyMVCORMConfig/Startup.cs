@@ -43,7 +43,7 @@ namespace JulyMVCORMConfig
     options.UseSqlServer(
         Configuration.GetConnectionString("MyCS")));
 
-
+            int a = 1;
 
             services.AddDefaultIdentity<IdentityUser>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
@@ -69,6 +69,7 @@ namespace JulyMVCORMConfig
                 app.UseHsts();
             }
 
+            int b = 1;
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
