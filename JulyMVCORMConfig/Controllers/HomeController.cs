@@ -12,6 +12,7 @@ namespace JulyMVCORMConfig.Controllers
     {
         public IActionResult Index()
         {
+            string a="Added by Barkat Ali";
             return View();
         }
 
